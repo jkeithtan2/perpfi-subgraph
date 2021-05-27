@@ -1,0 +1,24 @@
+{
+  "name": "perp-position-subgraph",
+  "version": "1.0.0",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "create-local": "graph create perpfi/perp-protocol-subgraph --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy perpfi/perp-protocol-subgraph --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "npm run build && graph deploy perpfi/perp-protocol-subgraph --access-token ${THE_GRAPH_ACCESS_TOKEN} --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.20.0",
+    "@graphprotocol/graph-ts": "^0.20.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
+  }
+}

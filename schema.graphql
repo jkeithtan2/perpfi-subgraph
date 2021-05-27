@@ -1,0 +1,38 @@
+type FundingRateUpdatedEvent @entity {
+  id: ID!
+  symbol: String!
+  amm: Bytes! # address
+  rate: BigInt! # int256
+  underlyingPrice: BigInt! # int256
+  blockNumber: BigInt! # last updated block number
+  timestamp: BigInt! # last updated timestamp
+}
+
+type LiquidityChangedEvent @entity {
+  id: ID!
+  symbol: String!
+  amm: Bytes!
+  quoteReserve: BigInt!
+  baseReserve: BigInt!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type Amm @entity {
+  id: ID!
+  address: Bytes! # address
+  symbol: String
+  quoteAssetReserve: BigInt! # uint256
+  baseAssetReserve: BigInt! # uint256
+  blockNumber: BigInt # last updated block number
+  timestamp: BigInt # last updated timestamp
+}
+
+type Swap @entity {
+  id: ID!
+  address: Bytes! # address
+  symbol: String
+  direction: String!
+  quoteAssetAmount: BigInt!
+  baseAssetAmount: BigInt!
+}
