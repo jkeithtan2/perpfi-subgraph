@@ -71,7 +71,6 @@ Example querys:
 
 Get all indexed AMMs:
 ```
-current amms indexed:
 {
   amms {
     id
@@ -82,7 +81,6 @@ current amms indexed:
 
 Get info for one of the indexed AMM:
 ```
-current status of amm
 {
 	amm(id: "0x0f346e19f01471c02485df1758cfd3d624e399b4") {
   	id
@@ -114,6 +112,8 @@ Get all recent swaps:
 }
 
 ```
+
+
 Get all funding rate events by recency 
 ```
 {
