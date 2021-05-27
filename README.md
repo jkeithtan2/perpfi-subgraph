@@ -86,10 +86,6 @@ Get info for one of the indexed AMM:
   	id
     address
     symbol
-    positionBalance
-    openInterestSize
-    openInterestNotional
-    tradingVolume
     quoteAssetReserve
     baseAssetReserve
     blockNumber
